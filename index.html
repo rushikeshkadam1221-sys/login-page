@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1c1612" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Welcome back</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <main class="login-shell">
+      <section class="image-panel" aria-label="Background image">
+        <div class="image-panel__wash"></div>
+        <div class="image-panel__content">
+          <p class="eyebrow">A space for stillness</p>
+          <p class="image-panel__quote">“Where devotion<br />becomes a daily practice.”</p>
+          <div class="image-panel__line"></div>
+          <p class="image-panel__caption">NSS WARI SEWA</p>
+        </div>
+      </section>
+
+      <section class="form-panel" aria-labelledby="welcome-title">
+        <div class="form-wrap">
+          <div class="form-heading">
+            <p class="eyebrow">Welcome back</p>
+            <h1 id="welcome-title">Sign in to<br /><em>continue.</em></h1>
+            <p class="intro">Enter your User ID and password to continue.</p>
+          </div>
+
+          <form>
+            <label for="userid">User ID</label>
+            <input id="userid" name="userid" type="text" placeholder="Enter your User ID" autocomplete="username" required />
+
+            <div class="label-row">
+              <label for="password">Password</label>
+              <a href="#reset">Forgot password?</a>
+            </div>
+            <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required />
+
+            <label class="check-label"><input type="checkbox" /> <span>Remember me</span></label>
+            <button class="submit-button" type="submit">Sign in <span aria-hidden="true">↗</span></button>
+          </form>
+
+          <p class="signup">New here? <a href="#create">Create an account</a></p>
+          <p class="legal">By continuing, you agree to our <a href="#terms">Terms</a> and <a href="#privacy">Privacy Policy</a>.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

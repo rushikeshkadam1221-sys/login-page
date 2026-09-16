@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+:root { font-family: 'DM Sans', sans-serif; color: #2b211c; background: #f4eee5; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; overflow-x: hidden; }
+button, input { font: inherit; }
+a { color: inherit; }
+
+.login-shell { min-height: 100svh; display: grid; grid-template-columns: minmax(370px, 1.08fr) minmax(460px, .92fr); background: #f4eee5; }
+.image-panel { position: relative; min-height: 100svh; overflow: hidden; color: #fff9ec; background: #302016 url('https://thumbs.dreamstime.com/b/silhouette-vitthal-rukmini-vector-silhouette-vitthal-rukmini-standing-statue-253664486.jpg') center / cover no-repeat; }
+.image-panel__wash { position: absolute; inset: 0; background: linear-gradient(100deg, rgba(22, 13, 9, .78), rgba(39, 21, 12, .3) 55%, rgba(30, 17, 11, .45)), linear-gradient(0deg, rgba(20, 12, 8, .5), transparent 50%); }
+.image-panel__content { position: relative; z-index: 1; height: 100%; padding: clamp(34px, 5vw, 76px); display: flex; flex-direction: column; justify-content: flex-end; }
+.eyebrow { margin: 0; color: #b5783f; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .2em; }
+.image-panel .eyebrow { color: #f1c786; margin-bottom: 22px; }
+.image-panel__quote { margin: 0 0 21px; font: 500 clamp(28px, 3.8vw, 52px)/1.13 'Playfair Display', serif; letter-spacing: -.025em; }
+.image-panel__line { width: 45px; height: 1px; background: #e7af6a; margin-bottom: 16px; }
+.image-panel__caption { margin: 0; color: rgba(255, 247, 230, .72); font-size: 12px; letter-spacing: .13em; text-transform: uppercase; }
+.form-panel { display: flex; align-items: center; justify-content: center; padding: 55px 7vw; }
+.form-wrap { width: min(100%, 408px); animation: rise .7s ease both; }
+.form-heading { margin-bottom: 35px; }
+h1 { margin: 14px 0; font: 500 clamp(39px, 4vw, 56px)/1.03 'Playfair Display', serif; letter-spacing: -.04em; color: #30251f; }
+h1 em { color: #b36e32; font-weight: 500; }
+.intro { margin: 0; color: #836f5f; font-size: 14px; }
+form { display: grid; gap: 11px; }
+label { color: #544338; font-size: 12px; font-weight: 600; letter-spacing: .02em; }
+.label-row { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+.label-row a, .signup a, .legal a { color: #a35e2d; text-decoration: none; border-bottom: 1px solid rgba(163, 94, 45, .35); }
+.label-row a { font-size: 11px; font-weight: 600; }
+input[type='text'], input[type='password'] { width: 100%; height: 52px; border: 1px solid #d9cabb; border-radius: 3px; outline: 0; padding: 0 14px; color: #33261f; background: rgba(255, 252, 247, .54); font-size: 13px; transition: border-color .2s, box-shadow .2s, background .2s; }
+input[type='text']:focus, input[type='password']:focus { border-color: #b8753d; background: #fffaf3; box-shadow: 0 0 0 3px rgba(184, 117, 61, .12); }
+input::placeholder { color: #b8a99b; }
+.check-label { display: flex; align-items: center; gap: 8px; margin: 5px 0 12px; color: #836f5f; font-size: 12px; font-weight: 400; cursor: pointer; }
+.check-label input { width: 14px; height: 14px; margin: 0; accent-color: #af6932; }
+.submit-button { height: 53px; display: flex; align-items: center; justify-content: center; gap: 22px; border: 0; border-radius: 3px; color: #fff9f1; background: #a95f2b; box-shadow: 0 9px 20px rgba(126, 69, 28, .16); cursor: pointer; font-size: 13px; font-weight: 600; transition: background .2s, transform .2s, box-shadow .2s; }
+.submit-button span { font-size: 18px; font-weight: 400; transition: transform .2s; }
+.submit-button:hover { background: #8f4e24; box-shadow: 0 11px 23px rgba(126, 69, 28, .23); transform: translateY(-1px); }
+.submit-button:hover span { transform: translate(3px, -3px); }
+.submit-button:focus-visible, a:focus-visible { outline: 2px solid #a95f2b; outline-offset: 3px; }
+.signup { margin: 35px 0 0; color: #836f5f; font-size: 12px; text-align: center; }
+.signup a { font-weight: 600; }
+.legal { margin: 52px 0 0; color: #b1a094; font-size: 10px; line-height: 1.6; text-align: center; }
+.legal a { color: #927c6b; }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 780px) { .login-shell { display: block; width: 100%; } .image-panel { min-height: 300px; height: 39svh; } .image-panel__content { padding: 25px; } .image-panel__quote { font-size: clamp(29px, 8vw, 40px); } .image-panel__caption { font-size: 9px; } .form-panel { width: 100%; padding: 44px 25px 32px; align-items: flex-start; } .form-wrap, form { width: 100%; max-width: 420px; } .form-heading { margin-bottom: 28px; } .legal { margin-top: 38px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
